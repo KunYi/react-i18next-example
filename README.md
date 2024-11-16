@@ -1,46 +1,139 @@
-# Getting Started with Create React App
+# React-i18next Localization Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This repository contains a sample project demonstrating the use of `react-i18next` for internationalization (i18n) in React applications. It provides a simple setup to manage translations and switch between multiple languages seamlessly.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+```bash
+.
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   ├── LanguageToggle.tsx
+│   │   └── ThemeToggle.tsx
+│   ├── hooks
+│   │   ├── useLanguage.tsx
+│   │   └── useTheme.tsx
+│   ├── i18n
+│   │   ├── config.ts
+│   │   └── locales
+│   │       ├── cn
+│   │       │   └── common.ts
+│   │       ├── en
+│   │       │   └── common.ts
+│   │       ├── index.ts
+│   │       └── tw
+│   │           └── common.ts
+│   ├── index.css
+│   ├── index.tsx
+│   └── react-app-env.d.ts
+├── tsconfig.json
+└── yarn.lock
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Easy integration of `react-i18next` for localization.
+- Support for multiple languages (e.g., English, Traditional Chinese, Simplified Chinese).
+- Dynamic language switching.
+- Example translation files for demonstration.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (version 14 or later)
+- npm or yarn or pnpm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/KunYi/react-i18next-example.git
+   ```
 
-### `npm run eject`
+2. Navigate to the project directory:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   cd react-i18next-example
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install the dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   npm install
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   or
 
-## Learn More
+   ```bash
+   yarn install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   or
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   pnpm install
+   ```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+npm start
+```
+
+or
+
+```bash
+yarn start
+```
+
+or
+
+```bash
+pnpm start
+```
+
+Open your browser and navigate to `http://localhost:3000` to see the application in action.
+
+## Usage
+
+- The application demonstrates how to set up `react-i18next` for handling translations.
+- You can switch between languages using the provided language toggle component.
+
+### Adding New Languages
+
+To add a new language:
+
+1. Create a new translation file in the `i18n/locales` directory (e.g., `i18n/locales/[language_code]/common.ts`).
+2. Add the translations in the appropriate format.
+3. Update the i18next initialization in `i18n/locales/index.ts` to include the new language.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bugs.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [i18next](https://www.i18next.com/) - The internationalization framework used.
+- [react-i18next](https://react.i18next.com/) - React bindings for i18next.
